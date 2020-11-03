@@ -23,6 +23,12 @@ var app = new Vue({
                     that.weatherList = response.data.data.forecast
                 })
                 .catch(function(err) {})
+        },
+        changeCity: function(city) {
+            console.log(this.city)
+            console.log(city)
+            this.city = city;
+            this.searchWeather();
         }
     }
 })
